@@ -4,13 +4,15 @@ pipeline {
     stages {
         stage('Code') {
             steps {
-                echo 'Fetching the code'
+                echo 'Clone the code'
+                git url:"https://github.com/lijuworld/Hello-World.git" ,branch:"main"
             }
         }
         
         stage('Build') {
             steps {
                 echo 'building the code'
+                sh "docker build -t hello-world ."
             }
         }
         
