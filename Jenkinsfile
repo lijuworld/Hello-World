@@ -12,7 +12,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'building the code'
-                #sh "docker build -t hello-world ."
             }
         }
         
