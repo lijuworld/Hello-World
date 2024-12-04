@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'building the code'
-                bat "docker build -t hello-world ."
+                #bat "docker build -t hello-world ."
             }
         }
         
@@ -25,6 +25,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the container '
+		sh 'kubectl apply -f nginx-deployment.yaml'
             }
         }
     }
