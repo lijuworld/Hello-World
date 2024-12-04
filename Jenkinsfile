@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'building the code'
-                #bat "docker build -t hello-world ."
+                //bat "docker build -t hello-world ."
             }
         }
         
